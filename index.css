@@ -1,0 +1,130 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --bg-color:  #f0f0f0;
+  --color- :white;
+  --bg-shadow-dark-: 0 4px 8px  rgba(0,0,0,.6);
+  --bg-light- : rgb(159, 232, 159);
+  --bg-dark-: rgb(208, 201, 201);
+
+}
+
+body{
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-style: normal;
+  
+}
+.container{
+  width: 360px;
+  text-align: center;
+  margin: 2rem auto;
+  padding: 2rem;
+  box-shadow: var(--bg-shadow-dark-);
+  border-radius: 6px;
+}
+.heading{
+  font-family: "Roboto", serif;
+  font-weight: 700;
+  font-style: normal;
+  margin-bottom: 1rem;
+}
+.todo-form{
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.todo-form input{
+  flex: 1;
+  padding: 6px;
+outline: none;
+  border-radius: 6px;
+  
+}
+.todo-form button{
+  padding: 8px 6px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--bg-light-);
+  transition: .3s linear;
+  cursor: pointer;
+}
+
+.todo-form button:hover{
+  background-color: lime;
+}
+
+.todo-list{
+  list-style: none;
+}
+
+.list-item{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .8rem;
+  padding: .5rem 0;
+  border-bottom: 1px solid ;
+}
+
+.list-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-left: 3px;
+}
+
+.list-item span{
+  font-size: 18px;
+  flex: 1;
+}
+.list-item.completed >span{
+ text-decoration: line-through;
+ 
+}
+
+.btncontainer{
+  display: flex;
+  gap: 6px;
+  margin-right: 3px;
+}
+.btncontainer button{
+  padding: 8px 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 9px;
+  cursor: pointer;
+}
+
+.editbtn:hover{
+  background-color: magenta;
+}
+
+.deletebtn:hover{
+  background-color: red;
+}
+
+.progressbar{
+  width: 100%;
+  height: auto;
+  background-color: gray;
+  transform: 0.3s linear;
+  border-radius: 3px;
+  overflow:  hidden;
+}
+.progressInner{
+  height: 10px;
+  width: 0;
+  background-color: lime;
+  
+}
